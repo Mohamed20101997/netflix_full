@@ -1,5 +1,10 @@
 <?php
-Route::group(['prefix' => 'dashboard','name'=>'dashboard.'], function () {
+Route::prefix('dashboard')->name('dashboard.')->group(function () {
+
     Route::get('/','WelcomeController@index')->name('welcome');
 
+    //category routes
+    Route::resource('categories', 'CategoryController');
 });
+
+
