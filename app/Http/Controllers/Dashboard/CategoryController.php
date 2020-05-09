@@ -32,12 +32,6 @@ class CategoryController extends Controller
         return redirect()->route('dashboard.categories.index');
     }
 
-
-    public function show($id)
-    {
-        //
-    }
-
     public function edit(Category $category)
     {
         return view('dashboard.categories.edit',compact('category'));
