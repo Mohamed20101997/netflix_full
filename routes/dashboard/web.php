@@ -11,6 +11,9 @@ Route::prefix('dashboard')
 
     //role routes
     Route::resource('roles', 'RoleController')->except('show');
+
+    //users routes
+    Route::resource('users', 'UserController')->except('show');
 });
 
 

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
    
-    <title>Netflixfy</title>
+    <title>Netflixify</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,6 +28,13 @@
       label{
         font-weight: bold;
       }
+      
+      @media only screen and (max-width: 600px) {
+        .tile{
+        overflow-x: scroll;
+      }
+      }
+  
     </style>
   </head>
   <body class="app sidebar-mini">
@@ -52,7 +59,7 @@
   <script src="{{ asset('dashboard_files/js/bootstrap.min.js') }}"></script>
   <script src="{{ asset('dashboard_files/js/main.js') }}"></script>
   {{-- select2--}}
-  <script src="{{ asset('dashboard_files/plugins/select2/select2.min.js') }}"></script>
+  <script src="{{ asset('dashboard_files/js/plugins/select2.min.js') }}"></script>
   
     @include('dashboard.partials._confirm')
   
