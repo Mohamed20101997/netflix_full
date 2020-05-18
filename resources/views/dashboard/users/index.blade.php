@@ -41,7 +41,7 @@
                             <div class="col-md-4">
                               <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i>Search</button>
 
-                              @if (auth()->user()->hasPermission('creat_users'))
+                              @if (auth()->user()->hasPermission('create_users'))
                                 <a href="{{ route('dashboard.users.create') }}" class="btn btn-primary"><i class="fa fa-plus"></i>Add</a>
                               @else
                                 <a href="#" class="btn btn-primary disabled"><i class="fa fa-plus"></i>Add</a>
