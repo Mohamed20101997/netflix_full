@@ -15,6 +15,9 @@ Route::prefix('dashboard')
     //users routes
     Route::resource('users', 'UserController')->except('show');
 
+    //movies routes
+    Route::resource('movies', 'MovieController')->except('show');
+
     //setting routes
     Route::get('/settings/social_login','SettingController@social_login')->name('settings.social_login');
     Route::get('/settings/social_links','SettingController@social_links')->name('settings.social_links');

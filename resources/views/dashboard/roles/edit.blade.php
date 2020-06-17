@@ -39,11 +39,16 @@
 
                             <tbody>
                                 @php
-                                    $models = ['categories','users'];
-                                    $permission_maps =['create','read','update','delete']
+                                    $models = ['categories','movies','users','settings'];
+                                    $permission_maps =['create','read','update','delete'];
                                 @endphp
 
                                 @foreach ($models as $index=>$model)
+                                    @if ($model == 'settings')
+                                        @php
+                                            $permission_maps =['create','read'];
+                                        @endphp
+                                    @endif        
                                     <tr>
                                         <td>{{ $index+1 }}</td>
                                         <td>{{ $model }}</td>
