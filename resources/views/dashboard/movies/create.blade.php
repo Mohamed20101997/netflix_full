@@ -49,7 +49,7 @@
 
                 {{-- progress bar --}}
                 <div class="form-group">
-                    <label>Uploading</label>
+                    <label id="movie__upload-status">Uploading</label>
                     <div class="progress">
                         <div class="progress-bar" id="movie__upload-progress" role="progressbar"></div>
                       </div>
@@ -94,7 +94,7 @@
                 
         
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i>Add</button>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i>Publish</button>
                 </div>
         
             </form>

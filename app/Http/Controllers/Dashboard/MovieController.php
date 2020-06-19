@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Jobs\StreamMovie;
 use App\Movie;
 use Illuminate\Http\Request;
 
@@ -26,6 +27,12 @@ class MovieController extends Controller
         
     }
 
+    public function show(Movie $movie)
+    {
+       return $movie ;
+        
+    }
+
     public function create()
     {
         $movie = Movie::create([]);
@@ -41,6 +48,9 @@ class MovieController extends Controller
         'name'=> $request->name,
         'path'=> $request->file('movie')->store('movies'),
        ]);
+
+       //the job in  background
+       $this->dispatch(new StreamMovie($movie));
 
        return $movie;
 
