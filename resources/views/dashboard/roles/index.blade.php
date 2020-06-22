@@ -66,8 +66,9 @@
                                 <td>{{ $role->name }}</td>
                                 <td>
                                     @foreach ($role->permissions as $permission)
-                                    <h5 style="display: inline-block"><span
-                                            class="badge badge-primary">{{ $permission->name }}</span></h5>
+                                        <h5 style="display: inline-block">
+                                            <span class="badge badge-primary">{{ $permission->name }}</span>
+                                        </h5>
                                     @endforeach
                                 </td>
                                 <td>{{ $role->users_count }}</td>

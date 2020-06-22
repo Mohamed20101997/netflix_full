@@ -23,10 +23,21 @@
 
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <input type="text" autofocus name="search" placeholder="search" class="form-control"
+                                    <input type="text" autofocus name="search" placeholder="search by name, description, rating, year" class="form-control"
                                         value="{{ request()->search }}">
                                 </div>
                             </div><!-- end of col 4 for search -->
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                  <select name="category" class="form-control">
+                                    <option value="">All categories</option>
+                                    @foreach ($categories as $category)
+                                      <option value="{{ $category->id }}" {{ request()->$category == $category->id ? 'selected': '' }}>{{ $category->name }}</option>
+                                    @endforeach
+                                  </select>
+                                </div>
+                            </div><!-- end of col 4 for categories -->
 
                             <div class="col-md-4">
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i>Search</button>
@@ -53,6 +64,10 @@
                             <tr>
                                 <th>#</th>
                                 <th>Name</th>
+                                <th>Description</th>
+                                <th>Categories</th>
+                                <th>Year</th>
+                                <th>Rating</th>
                                 <th>ِAction</th>
                             </tr>
                         </thead>
@@ -62,6 +77,16 @@
                             <tr>
                                 <td>{{ $index+1 }}</td>
                                 <td>{{ $movie->name }}</td>
+                                <td>{{  Str::limit($movie->description, 50) }}</td>
+                                <td>
+                                    @foreach ($movie->categories as $category)
+                                        <h5 style="display: inline-block">
+                                            <span class="badge badge-primary">{{ $category->name }}</span>
+                                        </h5>
+                                    @endforeach
+                                </td>
+                                <td>{{ $movie->year }}</td>
+                                <td>{{ $movie->rating }}</td>
                                 <td>
                                     @if (auth()->user()->hasPermission('update_movies'))
                                         <a href="{{ route('dashboard.movies.edit', $movie->id) }}" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i>Edit</a>

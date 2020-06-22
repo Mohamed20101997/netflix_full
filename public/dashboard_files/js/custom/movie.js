@@ -46,6 +46,7 @@ $(document).ready(function(){
                                 clearInterval(interval); //break interval
                                 $('#movie__upload-status').html('Done Processing');
                                 $('#movie__upload-progress').parent().css('display', 'none');
+                                $('#movie__submit-btn').css('display', 'block');
                             }
 
                         }
