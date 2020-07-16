@@ -1,0 +1,72 @@
+[2020-07-16 20:41:35] local.ERROR: Illuminate\Routing\RouteFileRegistrar::register(): Failed opening required 'C:\laragon\www\netflix\routes/api.php' (include_path='.;C:/laragon/etc/php/pear') {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Illuminate\\Routing\\RouteFileRegistrar::register(): Failed opening required 'C:\\laragon\\www\
+etflix\outes/api.php' (include_path='.;C:/laragon/etc/php/pear') at C:\\laragon\\www\
+etflix\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteFileRegistrar.php:35)
+[stacktrace]
+#0 {main}
+"} 
+[2020-07-16 20:45:51] local.ERROR: Illuminate\Routing\RouteFileRegistrar::register(): Failed opening required 'C:\laragon\www\netflix\routes/api.php' (include_path='.;C:/laragon/etc/php/pear') {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Illuminate\\Routing\\RouteFileRegistrar::register(): Failed opening required 'C:\\laragon\\www\
+etflix\outes/api.php' (include_path='.;C:/laragon/etc/php/pear') at C:\\laragon\\www\
+etflix\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteFileRegistrar.php:35)
+[stacktrace]
+#0 {main}
+"} 
+[2020-07-16 20:46:33] local.ERROR: Illuminate\Routing\RouteFileRegistrar::register(): Failed opening required 'C:\laragon\www\netflix\routes/api.php' (include_path='.;C:/laragon/etc/php/pear') {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Illuminate\\Routing\\RouteFileRegistrar::register(): Failed opening required 'C:\\laragon\\www\
+etflix\outes/api.php' (include_path='.;C:/laragon/etc/php/pear') at C:\\laragon\\www\
+etflix\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteFileRegistrar.php:35)
+[stacktrace]
+#0 {main}
+"} 
+[2020-07-16 20:46:59] local.ERROR: Illuminate\Routing\RouteFileRegistrar::register(): Failed opening required 'C:\laragon\www\netflix\routes/api.php' (include_path='.;C:/laragon/etc/php/pear') {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Illuminate\\Routing\\RouteFileRegistrar::register(): Failed opening required 'C:\\laragon\\www\
+etflix\outes/api.php' (include_path='.;C:/laragon/etc/php/pear') at C:\\laragon\\www\
+etflix\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteFileRegistrar.php:35)
+[stacktrace]
+#0 {main}
+"} 
+[2020-07-16 21:12:27] local.ERROR: Illuminate\Routing\RouteFileRegistrar::register(): Failed opening required 'C:\laragon\www\netflix\routes/api.php' (include_path='.;C:/laragon/etc/php/pear') {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Illuminate\\Routing\\RouteFileRegistrar::register(): Failed opening required 'C:\\laragon\\www\
+etflix\outes/api.php' (include_path='.;C:/laragon/etc/php/pear') at C:\\laragon\\www\
+etflix\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteFileRegistrar.php:35)
+[stacktrace]
+#0 {main}
+"} 
+[2020-07-16 21:16:39] local.ERROR: Illuminate\Routing\RouteFileRegistrar::register(): Failed opening required 'C:\laragon\www\netflix\routes/api.php' (include_path='.;C:/laragon/etc/php/pear') {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Illuminate\\Routing\\RouteFileRegistrar::register(): Failed opening required 'C:\\laragon\\www\
+etflix\outes/api.php' (include_path='.;C:/laragon/etc/php/pear') at C:\\laragon\\www\
+etflix\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteFileRegistrar.php:35)
+[stacktrace]
+#0 {main}
+"} 
+[2020-07-16 21:21:48] local.ERROR: Illuminate\Routing\RouteFileRegistrar::register(): Failed opening required 'C:\laragon\www\netflix\routes/api.php' (include_path='.;C:/laragon/etc/php/pear') {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Illuminate\\Routing\\RouteFileRegistrar::register(): Failed opening required 'C:\\laragon\\www\
+etflix\outes/api.php' (include_path='.;C:/laragon/etc/php/pear') at C:\\laragon\\www\
+etflix\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteFileRegistrar.php:35)
+[stacktrace]
+#0 {main}
+"} 
+[2020-07-16 21:22:44] local.ERROR: Illuminate\Routing\RouteFileRegistrar::register(): Failed opening required 'C:\laragon\www\netflix\routes/api.php' (include_path='.;C:/laragon/etc/php/pear') {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Illuminate\\Routing\\RouteFileRegistrar::register(): Failed opening required 'C:\\laragon\\www\
+etflix\outes/api.php' (include_path='.;C:/laragon/etc/php/pear') at C:\\laragon\\www\
+etflix\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteFileRegistrar.php:35)
+[stacktrace]
+#0 {main}
+"} 
+[2020-07-16 21:26:30] local.ERROR: Illuminate\Routing\RouteFileRegistrar::register(): Failed opening required 'C:\laragon\www\netflix\routes/api.php' (include_path='.;C:/laragon/etc/php/pear') {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Illuminate\\Routing\\RouteFileRegistrar::register(): Failed opening required 'C:\\laragon\\www\
+etflix\outes/api.php' (include_path='.;C:/laragon/etc/php/pear') at C:\\laragon\\www\
+etflix\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteFileRegistrar.php:35)
+[stacktrace]
+#0 {main}
+"} 
+[2020-07-16 21:39:59] local.ERROR: Illuminate\Routing\RouteFileRegistrar::register(): Failed opening required 'C:\laragon\www\netflix\routes/api.php' (include_path='.;C:/laragon/etc/php/pear') {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Illuminate\\Routing\\RouteFileRegistrar::register(): Failed opening required 'C:\\laragon\\www\
+etflix\outes/api.php' (include_path='.;C:/laragon/etc/php/pear') at C:\\laragon\\www\
+etflix\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteFileRegistrar.php:35)
+[stacktrace]
+#0 {main}
+"} 
+[2020-07-16 21:44:13] local.ERROR: Illuminate\Routing\RouteFileRegistrar::register(): Failed opening required 'C:\laragon\www\netflix\routes/api.php' (include_path='.;C:/laragon/etc/php/pear') {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Illuminate\\Routing\\RouteFileRegistrar::register(): Failed opening required 'C:\\laragon\\www\
+etflix\outes/api.php' (include_path='.;C:/laragon/etc/php/pear') at C:\\laragon\\www\
+etflix\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteFileRegistrar.php:35)
+[stacktrace]
+#0 {main}
+"} 
+[2020-07-16 21:47:57] local.ERROR: Illuminate\Routing\RouteFileRegistrar::register(): Failed opening required 'C:\laragon\www\netflix\routes/api.php' (include_path='.;C:/laragon/etc/php/pear') {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Illuminate\\Routing\\RouteFileRegistrar::register(): Failed opening required 'C:\\laragon\\www\
+etflix\outes/api.php' (include_path='.;C:/laragon/etc/php/pear') at C:\\laragon\\www\
+etflix\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteFileRegistrar.php:35)
+[stacktrace]
+#0 {main}
+"} 

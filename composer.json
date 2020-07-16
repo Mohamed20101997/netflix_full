@@ -20,7 +20,8 @@
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.0",
         "pbmedia/laravel-ffmpeg": "^7.0",
-        "santigarcor/laratrust": "5.2.*"
+        "santigarcor/laratrust": "5.2.*",
+        "symfony/error-handler": "^5.1"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
