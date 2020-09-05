@@ -12,13 +12,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/' , 'WelcomeController@index')->name('welcome');
+
+
+//movie routes
+Route::resource('movies','MovieController')->only(['index','show']);
+
+
+// Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider')->where('provider','facebook|google');
 Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback')->where('provider','facebook|google');

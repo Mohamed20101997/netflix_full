@@ -51,6 +51,7 @@
                 <tr>
                   <th>#</th>
                   <th>Name</th>
+                  <th>Movies</th>
                   <th>Action</th>
                 </tr>
               </thead>
@@ -60,8 +61,9 @@
                     <tr>
                     <td>{{ $index+1 }}</td>
                     <td>{{ $category->name }}</td>
+                    <td>{{ $category->movies_count }}</td>
                     <td>
-                      @if (auth()->user()->hasPermission('update_categories'))     
+                      @if (auth()->user()->hasPermission('update_categories'))
                         <a href="{{ route('dashboard.categories.edit', $category->id) }}" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i>Edit</a>
                       @else
                         <a href="#" class="btn btn-warning btn-sm disabled"><i class="fa fa-edit"></i>Edit</a>
@@ -71,10 +73,10 @@
                         <form method="post" action={{route('dashboard.categories.destroy',$category->id)}} style="display: inline-block">
                           @csrf
                           @method('delete')
-                          <button type="submit" class="btn btn-danger btn-sm delete"><i class="fa fa-trash"></i>Delete</button>  
+                          <button type="submit" class="btn btn-danger btn-sm delete"><i class="fa fa-trash"></i>Delete</button>
                         </form> <!-- end of form -->
                       @else
-                        <button  class="btn btn-danger btn-sm  disabled"><i class="fa fa-trash"></i>Delete</button>   
+                        <button  class="btn btn-danger btn-sm  disabled"><i class="fa fa-trash"></i>Delete</button>
                       @endif
 
                     </td>
@@ -88,11 +90,11 @@
           @else
             <h3 class="alert alert-info text-center" style="font-weight: 400"><i class="fa fa-exclamation-triangle"></i> Sorry no records found</h3>
           @endif
-            </div> <!-- end of col-md-12 -->     
+            </div> <!-- end of col-md-12 -->
         </div> <!-- end of row -->
 
     </div> <!-- end of tile -->
 
-  </div> {{-- end of col  --}}  
+  </div> {{-- end of col  --}}
 </div> {{-- end of row  --}}
 @endsection

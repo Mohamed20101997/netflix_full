@@ -11,7 +11,7 @@ class RouteServiceProvider extends ServiceProvider
     protected $dashboard_namespace = 'App\Http\Controllers\Dashboard';
 
 
-    public const HOME = '/home';
+    public const HOME = '/';
 
     public function boot()
     {
