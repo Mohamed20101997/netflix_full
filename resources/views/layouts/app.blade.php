@@ -14,7 +14,7 @@
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700&display=swap" rel="stylesheet">
     <!-- main css -->
-    <link rel="stylesheet" href="css/main.min.css">
+        <link rel="stylesheet" href="{{ asset('css/main.min.css') }}">
 </head>
 <body>
 
@@ -28,6 +28,12 @@
 <script src="{{ asset('js/vendor.min.js') }}"></script>
 <!-- main  -->
 <script src="{{ asset('js/main.min.js') }}"></script>
+
+<!-- play  -->
+<script src="{{ asset('js/playerjs.js') }}"></script>
+
+@stack('scripts')
+
 
 <script>
     $(document).ready(function(){

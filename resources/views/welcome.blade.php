@@ -11,17 +11,17 @@
         <div class="movies owl-carousel owl-theme">
 
             @foreach ($latest_movies as $latest_movie)
-                
+
                 <div class="movie text-white d-flex justify-content-center align-items-center">
 
                     <div class="movie__bg" style="background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url({{ $latest_movie->image_path }}) center/cover no-repeat;"></div>
-                    
+
                     <div class="container">
 
                         <div class="row">
 
                             <div class="col-md-6">
-                                
+
                                 <div class="d-flex justify-content-between">
                                     <h1 class="movie__name fw-300">{{ $latest_movie->name }}</h1>
                                     <span class="movie__year align-self-center">{{ $latest_movie->year }}</span>
@@ -43,7 +43,7 @@
                                 <p class="movie__description my-2">{{ $latest_movie->description }}</p>
 
                                 <div class="movie_cta my-4 my-md-5">
-                                    <a href="show.html" class="btn btn-primary text-capitalize mr-0 mr-md-2"><i class="fas fa-play"></i> watch now</a>
+                                <a href="{{ route('movies.show', $latest_movie->id) }}" class="btn btn-primary text-capitalize mr-0 mr-md-2"><i class="fas fa-play"></i> watch now</a>
                                     <a href="#" class="btn btn-outline-light text-capitalize"><i class="fas fa-heart"></i> add to favorite</a>
                                 </div>
 
@@ -60,15 +60,15 @@
                 </div><!-- end of movie-->
 
             @endforeach
-         
+
 
         </div> <!-- end of movies-->
-        
+
     </section> <!-- end of banner section-->
 
 
     @foreach ($categories as $category)
-        
+
     <section id="listing" class="py-2">
 
         <div class="container">
@@ -78,8 +78,8 @@
 
                     <h3 class="listing__title fw-300 text-white">{{ $category->name }}</h3>
                     <a href="#" class="align-self-center text-capitalize btn btn-outline-primary">see all</a>
-                    
-                </div> 
+
+                </div>
 
             </div><!-- end of row -->
 
@@ -92,7 +92,7 @@
                     <img src="{{ $movie->poster_path }}" class="img-fluid" alt="togo">
 
                     <div class="movie__details text-white">
-                        
+
                         <div class="d-flex justify-content-between">
                             <p class="mb-0 movie__name">{{ $movie->name }}</p>
                             <p class="mb-0 movie__year align-self-center">{{ $movie->year }}<p>
@@ -107,7 +107,7 @@
                             </div>
 
                             <p class="align-self-center">{{ $movie->rating }}</p>
-                            
+
                         </div> <!--end of movie rating -->
 
                         <div class="movie__views">
@@ -124,7 +124,7 @@
                     </div> <!--end of movie details -->
 
                 </div> <!-- end of col -->
-                
+
                 @endforeach
 
 
@@ -138,8 +138,5 @@
 
     @include('layouts._footer')
 
-
-
-
-    
 @endsection
+

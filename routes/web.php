@@ -21,7 +21,5 @@ Route::get('/' , 'WelcomeController@index')->name('welcome');
 Route::resource('movies','MovieController')->only(['index','show']);
 
 
-// Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider')->where('provider','facebook|google');
 Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback')->where('provider','facebook|google');
