@@ -12,32 +12,22 @@ class User extends Authenticatable
     use LaratrustUserTrait;
     use Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'name', 'email', 'password',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
+    protected $withCount = ['movies'];
+
     protected $hidden = [
         'password', 'remember_token',
     ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+
 
         //scope -----------------------------------
 
@@ -58,8 +48,8 @@ class User extends Authenticatable
 
             });
         } // end of scopeWhereRole
-        
-        
+
+
         public function scopeWhereRoleNot($query , $role_name)
         {
             return $query->whereHas('roles', function($q) use ($role_name){
@@ -67,7 +57,7 @@ class User extends Authenticatable
                 return $q->whereNotIn('name', (array)$role_name)
                         ->WhereNotIn('id' , (array)$role_name);
 
-            });   
+            });
 
         }   // end of scopeWhereRoleNot
 
@@ -81,6 +71,13 @@ class User extends Authenticatable
 
         } // end of scopeWhenRole
 
+
+        // relations------------------------------------------
+
+        public function movies()
+        {
+            return $this->belongsToMany(Movie::class, 'user_movie');
+        }
 
 
 } // end of user model

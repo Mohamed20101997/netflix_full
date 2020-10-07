@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> Netflixify </title>
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <!-- main bootstrap -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <!-- fontawesome -->
@@ -15,6 +16,13 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700&display=swap" rel="stylesheet">
     <!-- main css -->
         <link rel="stylesheet" href="{{ asset('css/main.min.css') }}">
+
+    <style>
+
+          .fw-900{
+              font-weight: 900;
+          }
+    </style>
 </head>
 <body>
 
@@ -32,8 +40,18 @@
 <!-- play  -->
 <script src="{{ asset('js/playerjs.js') }}"></script>
 
-@stack('scripts')
+<!-- custom  -->
+<script src="{{ asset('js/custom/movie.js') }}"></script>
 
+<script>
+
+    $.ajaxSetup({
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+  </script>
+@stack('scripts')
 
 <script>
     $(document).ready(function(){
