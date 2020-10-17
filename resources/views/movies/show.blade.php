@@ -106,8 +106,11 @@
                         <div class=" d-flex movie__cta">
                             <a href="{{route('movies.show', $movie->id) }}" class="btn btn-primary text-capitalize flex-fill mr-2"><i class="fas fa-play"></i> watch now</a>
                             @auth
-                                <a href="#" class="text-white align-self-center"><i class="far fa-heart align-self-center movie__fav-icon {{$movie->is_favored ? 'fw-900': ''}}"></i></a>
-                            @else
+                            <i class="far fa-heart align-self-center movie__fav-icon {{$movie->is_favored ? 'fw-900': ''}} movie-{{$movie->id}}"
+                                data-url="{{ route('movies.toggle_favorite', $movie->id) }}"
+                                data-id="{{$movie->id}}"
+                                >
+                            </i>                            @else
                                 <a href="{{route('login')}}" class="text-white align-self-center"><i class="far fa-heart align-self-center movie__fav-icon"></i></a>
                             @endauth
                         </div>

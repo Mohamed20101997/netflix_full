@@ -83,6 +83,19 @@ class Movie extends Model
 
         } //scopeWhenCategory
 
+        public function scopeWhenFavorite($query , $favorite){
+
+            return $query->when($favorite , function($q){
+
+                return $q->whereHas('users' , function($qu){
+
+                    return $qu->where('user_id', auth()->user()->id);
+                    
+                });
+
+            });
+
+        }
 
 
 }

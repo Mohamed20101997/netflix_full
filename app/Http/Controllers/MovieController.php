@@ -10,6 +10,11 @@ class MovieController extends Controller
     public function index()
     {
 
+        $movies = Movie::whenCategory(request()->category_name)
+                    ->whenFavorite(request()->favorite)
+                    ->paginate(20);
+                    
+        return view('movies.index', compact('movies'));
 
     }
     public function show(Movie $movie)

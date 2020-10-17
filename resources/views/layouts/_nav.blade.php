@@ -19,14 +19,13 @@
             <ul class="navbar-nav ml-auto">
                 @auth
                     <li class="navbar-nav ml-auto">
-                        <a href="" class="nav-link text-white mr-2" style="position: relative">
+                        <a href="{{ route('movies.index', ['favorite'=> 1]) }}" class="nav-link text-white mr-2" style="position: relative">
                             <i class="fa fa-heart"></i>
                             <span class="bg-primary text-white d-flex justify-content-center align-items-center"
                             style="position:absolute;top: 0; right: -15px; width: 30px; height: 20px; border-radius: 50px"
                             id="nav__fav-count"
                             data-fav-count="{{ auth()->user()->movies_count }}"
                             >
-
                                     {{ auth()->user()->movies_count > 9 ? '9+' : auth()->user()->movies_count }}
                             </span>
                         </a>

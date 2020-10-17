@@ -46,7 +46,13 @@
                                     <a href="{{ route('movies.show', $latest_movie->id) }}" class="btn btn-primary text-capitalize mr-0 mr-md-2"><i class="fas fa-play"></i> watch now</a>
 
                                     @auth
-                                        <a href="#" class="btn btn-outline-light text-capitalize"><i class="far fa-heart"></i> add to favorite</a>
+                                        <a href="#" class="btn btn-outline-light text-capitalize" id="movie__fav-btn">
+                                            <i class="far fa-heart movie__fav-icon {{$latest_movie->is_favored ? 'fw-900': ''}} movie-{{$latest_movie->id}}"
+                                                data-url="{{ route('movies.toggle_favorite', $latest_movie->id) }}"
+                                                data-id="{{$latest_movie->id}}"
+                                                >
+                                            </i> add to favorite
+                                        </a>
                                     @else
                                         <a href="{{route('login')}}" class="btn btn-outline-light text-capitalize"><i class="far fa-heart"></i> add to favorite</a>
                                     @endauth
@@ -72,6 +78,7 @@
 
     </section> <!-- end of banner section-->
 
+    @if($latest_movies->count() > 0)
 
     @foreach ($categories as $category)
 
@@ -83,7 +90,7 @@
                 <div class="col-12 d-flex justify-content-between">
 
                     <h3 class="listing__title fw-300 text-white">{{ $category->name }}</h3>
-                    <a href="#" class="align-self-center text-capitalize btn btn-outline-primary">see all</a>
+                    <a href="{{ route('movies.index', ['category_name'=> $category->name]) }}" class="align-self-center text-capitalize btn btn-outline-primary">see all</a>
 
                 </div>
 
@@ -151,6 +158,14 @@
     </section> <!--end of listing section-->
     @endforeach
 
+    @else
+
+
+    <div class="col" style="margin-top:10%">
+        <h4 class="alert alert-primary fw-300"> Sorry no movies found</h4>
+    </div>
+
+    @endif
 
     @include('layouts._footer')
 
