@@ -10,10 +10,17 @@ class MovieController extends Controller
     public function index()
     {
 
+        if(request()->ajax()){
+
+            $movies = Movie::whenSearch(request()->search)->get();
+            return $movies;
+        }
+
+
         $movies = Movie::whenCategory(request()->category_name)
                     ->whenFavorite(request()->favorite)
                     ->paginate(20);
-                    
+
         return view('movies.index', compact('movies'));
 
     }
